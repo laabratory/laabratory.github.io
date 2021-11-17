@@ -1,5 +1,7 @@
-theme: jekyll-theme-minimal
 logo: https://avatars.githubusercontent.com/u/57609353
 description: Hi!  I'm a computer engineering student at UPenn interested in robotics and service.
 gems: 
   - jemoji
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+- jekyll-remote-theme
