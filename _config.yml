@@ -1,6 +1,8 @@
 logo: https://avatars.githubusercontent.com/u/57609353
+title: Aagam Dalal
 description: Hi!  I'm a computer engineering student at UPenn interested in robotics and service.
-remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: broccolini/swiss
+theme_color: yellow
 plugins:
 - jekyll-remote-theme
 - jemoji
