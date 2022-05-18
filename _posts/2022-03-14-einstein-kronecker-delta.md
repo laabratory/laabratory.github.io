@@ -3,10 +3,9 @@ layout: post
 title: Einstein Summation Notation
 author: Aagam Dalal
 ---
-
-# Einstein notation for summation
-
 The basic idea for einstein notation is to drop the sigma from summations in some cases (reducing notational complexity). For instance, you might want to compute the matrix multiplication between a row vector and a column vector: $\sum_i x_i * y^i$ (*Note that the superscript is not an exponent, but rather an index for a column vector -- a sometimes-helpful quirk of notation*).
+
+<!--more-->
 
 According to [Wolfram MathWorld](https://mathworld.wolfram.com/EinsteinSummation.html) there are 3 rules:
 

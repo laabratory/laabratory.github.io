@@ -2,8 +2,12 @@
 layout: post
 title: "Information Theory: Entropy"
 author: Aagam
+tag: Information Theory 
+thumb: /assets/post-images/2021-12-28-information-theory/2021-12-27-21-04-14.png
 ---
 Inspired by [this video](https://www.youtube.com/watch?v=sMb00lz-IfE) on compression, I wanted to understand what carrying information actually means, from a few interesting examples relating to repeated random events (like how much information is required to encode flipping a coin 100, 1000, or more times).
+
+<!--more-->
 
 # Intuition for Entropy
 Shannon entropy is the expectation of the number of bits required to encode a particular symbol. 
@@ -17,10 +21,10 @@ $$\sum_i^n -p_i\log p_i \text{ s.t. } \sum_i^n p_i = 1$$
 {% endraw %}
 
 Here's a look at what the function inside the sigma looks like (using base 2). As {% raw %}$$p \to 0$${% endraw %} the linear p term dominates, while in the middle, the logarithmic term plays a big role: 
-> ![](2021-12-27-21-04-14.png)
+> ![](/assets/post-images/2021-12-28-information-theory/2021-12-27-21-04-14.png)
 
 Here's perhaps a more useful view. Red is function we are examining, green is (obviously) a linear function and blue is a negative log:
-> ![](2021-12-27-21-15-00.png)
+> ![](/assets/post-images/2021-12-28-information-theory/2021-12-27-21-15-00.png)
 
 I was really confused about how using a logarithm of base 2 related to the bits. For a second imagine that we use base 10 instead of base 2. Now imagine the probability was .1, then .01, .001 etc. If we wanted to encode that these were the probabilities, then we would need to use {% raw %}$$-\log_10(p)$${% endraw %} digits. It's a similar thing for base 2, if we now consider numbers encoded in binary. Note that this isn't so much about the *precision* of the probability as it is about the magnitude; if we literally wanted to encode the exact probability and it were .100000000000000001 then we might need to use many more digits than the entropy predicts, even though it makes little difference.
 
@@ -35,10 +39,10 @@ Entropy in science (chemistry, for example) is often stated as the number of mic
 Let X be the binomial random variable that denotes the number of successes of n bernouli trials. The probability mass function is given by {% raw %}$$Pr[X = i] = p^i(1-p)^{n-i}$${% endraw %}. We aim to find {% raw %}$$\sum_{i = 1}^{n} p^i(1-p)^{n-i} \log(p^i(1-p)^{n-i}){% endraw %}.
 
 Here's [a desmos](https://www.desmos.com/calculator/hsxokrr2to) with the function. For a probability parameter p=.5:
-> ![](2021-12-27-21-47-22.png)
+> ![](/assets/post-images/2021-12-28-information-theory/2021-12-27-21-47-22.png)
 
 We see some interesting behavior. For a small number of trials, the entropy is small, but increases then rapidly drops to 0. This illustrates (to some extent) the value of repeated trials. I was curious to how this compared to something like the or standard deviation. The results are vastly different (let me know if I did something wrong in computing :sweat_smile:)
 
 ## For fun: entropy of the number of successes? (Geometric)
-![](2021-12-27-22-06-04.png)
+![](/assets/post-images/2021-12-28-information-theory/2021-12-27-22-06-04.png)
 (This really doesn't make much sense since the x-axis represents the number of trials, and the whole point is that a geometric RV is unbounded).

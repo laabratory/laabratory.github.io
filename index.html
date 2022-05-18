@@ -1,0 +1,117 @@
+---
+title: Aagam Dalal
+layout: base
+---
+<div class="px-4 py-5 mt-3 mb-5 text-center bg-special-grad">
+  <img class="d-block mx-auto mb-4 rounded-circle" src="assets/Profile Pictures - Jigisha Dalal_Hillary Cutter_Bexley_Columbus_2021-02-14 1030am_1613400152_recbpIMHaWxyY8OYl_120_19-Penncard (1).jpeg" alt="" style="object-fit: cover; width:80px; height:80px;">
+  <h1 class="display-5 fw-bold  text-white">Aagam Dalal</h1>
+  <p class="text-light" id="hero-write-text"></p>
+  <div class="btn-group" role="group" aria-label="Basic outlined example">
+    <a class="btn btn-outline-light" href="{% link blog.html %}"><strong>Blog :page_with_curl:</strong></button>
+    <a class="btn btn-outline-light" href="#timeline"><strong>About :running:</strong></a>
+    <a class="btn btn-outline-light" href="#projects"><strong>Projects :bulb:</strong></a>
+  </div>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4"></p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <a class="text-light" href="https://github.com/aadalal"><i class="bi bi-github"></i></a>
+      <a class="text-light" href="https://www.linkedin.com/in/aagam-dalal/"><i class="bi bi-linkedin"></i></a>
+    </div>
+  </div>
+</div>
+<main class="main-content container" id="main-content">
+  <div id="timeline">
+    <div class="row mb-2">
+      <div class="col-3 event mx-0">
+        <h4>2022</h4>
+      </div>
+      <div class="col mx-0 event-description">
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-3 m-0 p-0 event-wrapper">
+        <div class="event p-3">
+          <img src="{{ 'assets/NIST_logo.svg' | relative_url }}">
+        </div>
+      </div>
+      <div class="col ps-4 event-description">
+        <h6>Research at National Insitute of Standards and Technology</h6>
+        <p>Creating software for a state-of-the art <a href="https://www.nist.gov/news-events/news/2018/04/nists-new-quantum-method-generates-really-random-numbers">verifiable quantum randomness generator</a></p>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-3 m-0 p-0 event-wrapper">
+        <div class="event p-3">
+          <img src="{{ 'assets/University-of-Pennsylvania-shield-symbol.svg' | relative_url }}">
+        </div>
+      </div>
+      <div class="col ps-4 event-description">
+        <h6>Completed Freshman Year at Penn</h6>
+        <em>Classes</em>
+        <ul>
+          <li>CIS 121 - Data Structures and Algorithms</li>
+          <li>MGMT 117 - Global Growth of Emerging Firms</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-3 event mx-0">
+        <h4>2021</h4>
+      </div>
+      <div class="col mx-0 event-description">
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-3 m-0 p-0 event-wrapper">
+        <div class="event p-3">
+          <img src="{{ 'assets/penn_labs_logo.svg' | relative_url }}">
+        </div>
+      </div>
+      <div class="col ps-4 event-description">
+        <h6>Penn Labs</h6>
+        <p>Creating products used by tens of thousands of Penn students on <a href="https://pennlabs.org/products">the courses team</a>! Build backend APIs in Django/Rest-Framework.</p>
+      </div>
+    </div>
+    <div class="row mb-2">
+      <div class="col-3 m-0 p-0 event-wrapper">
+        <div class="event p-3">
+          <img src="{{ 'assets/cropped-bird_shield_text.webp' | relative_url }}">
+        </div>
+      </div>
+      <div class="col ps-4 event-description">
+        <h6>PennAir</h6>
+        <p>Work on aerial object identification.</p>
+      </div>
+    </div>
+  </div>
+ 
+</main>
+<script>
+  var i = 0;
+  var txts = ["Hi, I'm Aagam ✋",];
+  var speed = 50;
+
+  function typeWriter(txt) {
+    if (i < txt.length) {
+      document.getElementById("hero-write-text").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(() => typeWriter(txt), speed);
+    }
+  }
+
+  function typeRemover() {
+    if (i > 0) {
+      document.getElementById("hero-write-text").innerHTML = document.getElementById("hero-write-text").innerHTML.slice(0, -1);
+      i++;
+      setTimeout(typeRemover, speed);
+    }
+  }
+  
+
+  for (const txt of txts) {
+    // potentially not old-browser friendly
+    typeWriter(txt);
+    document.getElementById("hero-write-text").innerHTML = "";
+    i = 0;
+  }
+</script>
