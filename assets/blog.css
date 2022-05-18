@@ -22,6 +22,12 @@
 }
 
 /* XSmall devices (<= 576px) */
+
+#hero-write-text {
+  min-height: 1.25em;
+  line-height: 1.25em;
+}
+
 @media screen and (max-width: 576px) { 
   :root{
     --container-width: 100%;
@@ -47,10 +53,6 @@ html, body {
 
 .main-content {
   flex: auto; /*Stretch*/
-}
-
-.low-contrast {
-  color: gray; /*TODO */
 }
 
 .splash-image {
