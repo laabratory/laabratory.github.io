@@ -40,14 +40,14 @@ Examples:
 
 The Kronecker delta is a pretty simple idea that says the following (written as pseudocode)
 
-$\delta_{ij}$
+<kbd>$\delta_{ij}$</kbd>
 ```
 if i == j:
     1
 else: 
     0
 ```
-It allows a neat rewriting of the dot product as $\delta_{ij} x_i y_j$, or the trace as $\delta_{ij} A_ij$. It also allows a nice expression for matrix multiplication $\delta_{jk} A_ij B_ki$.
+It allows a neat rewriting of the dot product as $\delta_{ij} x_i y_j$, or the trace as $\delta_{ij} A_{ij}$. It also allows a nice expression for matrix multiplication $\delta_{jk} A_{ij} B_{ki}$.
 
 ## Levi-Civita Permutation Tensor
 
@@ -55,7 +55,7 @@ The $\epsilon$ tensor (called so because it can be described as N-D array) helps
 
 in 3d we can describe the tensor as follows:
 
-$\epsilon_{ijk}$
+<kbd>$\epsilon_{ijk}$</kbd>
 ```
 if i == j or j == k or i == k:
     0
@@ -67,7 +67,7 @@ else:
 By *shift* we mean going from a sequence $abc$ -> $bca$ -> $cab$. Case 2 is called the *cyclic* or *even* case, and case 3 is the *acyclic/odd* case.
 
 This allows us to rewrite the cross product where $C_i$ is hte $i$th component of the cross product $i,j,k$ vary from 1 to 3):
-$u \cross v = (u_y * v_z - u_z * v_y) \hat{x} + (u_y * v_z - u_z * v_y) \hat{y} \to C_i = \epsilon_{ijk} u_j v_k$
+$u \times v = (u_y * v_z - u_z * v_y) \hat{x} + (u_y * v_z - u_z * v_y) \hat{y} \to C_i = \epsilon_{ijk} u_j v_k$
 
 The Levi-Civita tensor allows for a few nice things:
 1. It encodes that $i \neq j$ and $i \neq k$ since terms go to 0 when this is violated.
