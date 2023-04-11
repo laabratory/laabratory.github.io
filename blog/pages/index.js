@@ -2,10 +2,16 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
+import { useLayoutEffect } from 'react'
+import { isDark } from '@/lib/darkmode'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  useLayoutEffect(() => {
+    if (isDark()) document.documentElement.classList.add('dark')
+  })
+
   return (
     <>
       <Head>

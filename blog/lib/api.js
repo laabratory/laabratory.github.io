@@ -28,6 +28,10 @@ export function getPostBySlug(slug, fields = []) {
     if (typeof data[field] !== 'undefined') {
       items[field] = data[field]
     }
+
+    if (field === 'date') {
+      items[field] = data[field].toISOString()
+    }
   })
 
   return items
