@@ -6,6 +6,7 @@ import Navbar from '@/components/navbar'
 import PostBody from '@/components/post-body'
 import { getAllPosts } from '@/lib/api'
 import markdownToHtml from '@/lib/markdownToHTML'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,11 +17,11 @@ export default function Home({ posts }) {
   }
 
   const postsList = posts.map(({ title, slug, date, preview }, idx) => (
-    <div className={idx ? "border-b-2" : "border-y-2"}>
+    <div className={idx ? "border-b-2" : "border-y-2"}  key={slug}>
       <div className='flex flex-row gap-2 items-center mb-1'>
-        <a className='text-2xl' href={slug}>
+        <Link className='text-2xl' href={slug}>
           { title }
-        </a>
+        </Link>
         <div className='opacity-50'>
           { date }
         </div>
@@ -52,7 +53,7 @@ export default function Home({ posts }) {
           <div className='mb-8 text-xl italic'>
           </div>
           <div className='font-bold text-xl opacity-75 flex flex-col gap-4'>
-            <a 
+            <a
             href="https://www.linkedin.com/in/aagam-dalal/"
             className="flex flex-row gap-2 items-center"
             >

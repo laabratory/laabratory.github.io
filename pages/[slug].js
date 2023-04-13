@@ -5,6 +5,7 @@ import PostBody from '@/components/post-body'
 import { getAllPosts, getPostBySlug } from '@/lib/api'
 import markdownToHtml from '@/lib/markdownToHTML'
 import { useRouter } from 'next/router'
+import ErrorPage from './error'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -50,7 +51,6 @@ export async function getStaticProps({ params: { slug } }) {
   const morePosts = getAllPosts(['title', 'slug'])
   const content = await markdownToHtml(post.content || '')
   
-
   return {
     props: {
       post: {

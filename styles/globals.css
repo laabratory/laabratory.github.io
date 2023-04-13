@@ -5,35 +5,10 @@
 @layer base {
   @font-face {
     font-family: "Junicode";
-    src: url(../public/fonts/JunicodeTwoBeta-CondensedItalic.ttf);
+    src: url(../public/fonts/junicodetwobeta-condenseditalic-webfont.woff) format("woff");
     font-weight: 400;
   }
 }
-
-
-/* 
-@font-face {
-  font-family: "Junicode";
-  src: url(../public/fonts/junicode-webfont.woff) format("woff");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Junicode";
-  src: url(../public/fonts/junicode-italic-webfont.woff) format("woff");
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
-  font-family: "Junicode";
-  src: url(../public/fonts/junicode-bold-webfont.woff) format("woff");
-  font-weight: 700;
-}
-@font-face {
-  font-family: "Junicode";
-  src: url(../public/fonts/junicode-bolditalic-webfont.woff) format("woff");
-  weight: 700;
-  font-style: italic;
-} */
 
 * {
   box-sizing: border-box;
