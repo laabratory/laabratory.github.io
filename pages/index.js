@@ -35,7 +35,7 @@ export default function Home({ posts }) {
   return (
     <>
       <Head>
-        <title>aagam's blog</title>
+        <title>aagam&apos;s blog</title>
       </Head>
       <main
       className={inter.className}
