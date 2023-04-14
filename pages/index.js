@@ -1,25 +1,27 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
 import Navbar from '@/components/navbar'
-import PostBody from '@/components/post-body'
 import { getAllPosts } from '@/lib/api'
 import markdownToHtml from '@/lib/markdownToHTML'
 import Link from 'next/link'
+import { linkFromSlug } from '@/lib/postHelpers'
+import { useState } from 'react'
+import fuzzysort from 'fuzzysort'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({ posts }) { 
+export default function Home({ posts }) {   
   const mockPost = {
     title: "", 
-    slug: "/",
+    slug: "",
   }
 
-  const postsList = posts.map(({ title, slug, date, preview }, idx) => (
-    <div className={idx ? "border-b-2" : "border-y-2"}  key={slug}>
+  const [search, setSearch] = useState("")
+
+  const getPostPreview = ({ title, slug, date, preview }, idx) => (
+    <div className="border-b-2"  key={slug}>
       <div className='flex flex-row gap-2 items-center mb-1'>
-        <Link className='text-2xl' href={slug}>
+        <Link className='text-2xl' href={linkFromSlug(slug)}>
           { title }
         </Link>
         <div className='opacity-50'>
@@ -30,7 +32,16 @@ export default function Home({ posts }) {
         { preview }
       </div>
     </div>
-  ))
+  )
+
+  const filteredPosts = search ? fuzzysort.go(
+      search,
+      posts,
+      {
+        keys: ['title', 'preview', 'tags', 'date', 'slug', 'tags']
+      }
+    ).map(({ obj }) => obj) : posts  
+  const postsList = filteredPosts.map(getPostPreview)
 
   return (
     <>
@@ -69,6 +80,12 @@ export default function Home({ posts }) {
             </a>
           </div>
           <div className='flex flex-col mt-10'>
+            <input 
+            className='focus:outline-none text-black bg-black/10 dark:bg-white/10 dark:text-white text-2xl py-1 border-b-2'
+            placeholder='Search'
+            value={search}
+            onChange={e => setSearch(e.target.value)}
+            />
             { postsList }
           </div>
         </div>
@@ -78,10 +95,10 @@ export default function Home({ posts }) {
 }
 
 export async function getStaticProps() {
-  const posts = getAllPosts(['title', 'slug', 'date', 'author', 'content'])
+  const posts = getAllPosts(['title', 'slug', 'date', 'content', 'tags'])
   const contents = await Promise.all(posts.map(({ content }) => (markdownToHtml(content))))
   const previews = contents.map(content => content.replace(/<[^>]*>/g, '').substring(0, 140) + '...')
-  const postsWithPreview = posts.map((post, index) => ({ ...post, preview: previews[index]}))
+  const postsWithPreview = posts.map(({ content: _, ...post }, index) => ({ ...post, preview: previews[index] }))
   return {
     props: {
       posts: postsWithPreview

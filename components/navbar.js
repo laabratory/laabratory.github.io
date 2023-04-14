@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { DarkModeSwitch } from "./darkmode-switch";
+import { linkFromSlug } from "@/lib/postHelpers";
 
 export default function Navbar({
   currentPost,
@@ -9,7 +10,7 @@ export default function Navbar({
   let loc = posts.map(post => post.slug).indexOf(currentPost.slug)
   loc = loc === -1 ? 0 : loc
   
-  const postToLink = post => <a href={`/${post.slug}`} key={post.slug} className="opacity-75">{post.title}</a>
+  const postToLink = post => <Link href={linkFromSlug(post.slug)} key={post.slug} className="opacity-75">{post.title}</Link>
 
   let previous = posts.slice(0, loc).map(postToLink)
   let next = posts.slice(loc + 1).map(postToLink)
@@ -26,7 +27,7 @@ export default function Navbar({
       <div className="col-span-6 md:col-span-4 flex flex-row justify-between items-center flex-shrink-0">
         <Link
         id="previous-post"
-        href={posts[loc - 1]?.slug || "#"}
+        href={linkFromSlug(posts[loc - 1]?.slug)}
         className={posts[loc - 1] ? "" : "opacity-50 cursor-not-allowed"}
         >
           <svg xmlns="http://www.w3.org/2000/svg" className="h-8" fill="currentColor" viewBox="144 64 224 384"><path d="M368 64L144 256l224 192V64z"/></svg>
@@ -38,7 +39,7 @@ export default function Navbar({
         </div>
         <Link 
         id="next-post"
-        href={posts[loc + 1]?.slug || "#"}
+        href={linkFromSlug(posts[loc + 1]?.slug)}
         className={posts[loc + 1] ? "" : "opacity-50 cursor-not-allowed dark:text-white"}
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="h-8 dark:text-white" viewBox="144 64 224 384"><path d="M144 448l224-192L144 64v384z"/></svg>

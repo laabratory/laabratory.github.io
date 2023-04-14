@@ -1,11 +1,9 @@
 ---
-layout: post
-title: Einstein Summation Notation
-author: Aagam Dalal
+title: "Einsum"
+date: 2022-03-14
+tags: "math"
 ---
 The basic idea for einstein notation is to drop the sigma from summations in some cases (reducing notational complexity). For instance, you might want to compute the matrix multiplication between a row vector and a column vector: $\sum_i x_i * y^i$ (*Note that the superscript is not an exponent, but rather an index for a column vector -- a sometimes-helpful quirk of notation*).
-
-<!--more-->
 
 According to [Wolfram MathWorld](https://mathworld.wolfram.com/EinsteinSummation.html) there are 3 rules:
 
@@ -14,25 +12,25 @@ According to [Wolfram MathWorld](https://mathworld.wolfram.com/EinsteinSummation
 The index is just $i$ or $j$ or the like. Repeated indices mean they appear more than once in *a single term*. 
 
 Examples:
-1. $x_i y_i = \sum_i x_i y_i$ :white_check_mark:
-2. $x_i + y_i = x_i + y_i$ :x:
+1. $$x_i y_i = \sum_i x_i y_i$$ ☑️
+2. $$x_i + y_i = x_i + y_i$$ ✖️
 
 > 2. Each index can appear at most twice in any term.
 
 This means that even the indices you intend to sum over should be repeated at most twice (obviously indices you don't want to sum over should be repeated at most once)
 
 Examples: 
-1. $x_i y_i z_i$ :x:
-1. $x_i y_j z_i$ :white_check_mark:
+1. $$x_i y_i z_i$$ ✖️
+2. $$x_i y_j z_i$$ ☑️
 
 > 3. Each term must contain identical non-repeated indices.
 
 This is a rule that only applies when you have more than one term. It specifies that if you use a term that only appears once in the first term (a *non-repeating* term), then you should make an effort to use the same index where there are non-repeating indices. To my mind, this does not always make things intuitive (see the examples below), and it is not emphasized among many Einstein notation users.
 
 Examples:
-1. $x_i y_i z_j + x_i c_p$ :x:
-1. $x_i y_i z_j + x_i c_j$ :white_check_mark:
-  2. Does this imply that the index $j$ in $z_j$ equals the index $j$ in $c_j$? It's a little unclear to my eye.
+1. $$x_i y_i z_j + x_i c_p$$ ✖️
+2. $$x_i y_i z_j + x_i c_j$$ ☑️
+  1. Does this imply that the index $j$ in $z_j$ equals the index $j$ in $c_j$? It's a little unclear to my eye.
 
 # Applications of Einstein Notation
 
@@ -40,7 +38,7 @@ Examples:
 
 The Kronecker delta is a pretty simple idea that says the following (written as pseudocode)
 
-<kbd>$\delta_{ij}$</kbd>
+$$\delta_{ij}$$
 ```
 if i == j:
     1

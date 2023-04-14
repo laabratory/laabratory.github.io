@@ -1,10 +1,9 @@
 ---
-title:` 
+title: "Incl/Exclusion"
+date: 2021-11-11
 tag: Utils 
 ---
 Continuing the long tradition of spending more time automating something that should be easy, I wanted to create an automatic function to expand the cardinality of unions:
-
-<!--more-->
 
 ## Technology
 * Typescript
