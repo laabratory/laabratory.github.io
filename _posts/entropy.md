@@ -1,6 +1,6 @@
 ---
 title: "Entropy"
-tag: Information Theory
+tags: Information Theory
 date: 2021-12-28
 ---
 Inspired by [this video](https://www.youtube.com/watch?v=sMb00lz-IfE) on compression, I wanted to understand what carrying information actually means, from a few interesting examples relating to repeated random events (like how much information is required to encode flipping a coin 100, 1000, or more times).
