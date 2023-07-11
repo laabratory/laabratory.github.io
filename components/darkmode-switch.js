@@ -46,7 +46,11 @@ export const DarkModeSwitch = ({
   ...rest
 }) => {
   const [isDarkMode, setIsDarkMode] = useState();
-  useEffect(() => setIsDarkMode(isDark()), [])
+  useEffect(() => {
+    const theme = isDark()
+    setIsDarkOrLight(theme)
+    setIsDarkMode(theme)
+  }, [])
   const properties = useMemo(() => {
     if (animationProperties !== defaultProperties) {
       return Object.assign(defaultProperties, animationProperties);

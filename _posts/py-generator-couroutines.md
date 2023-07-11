@@ -1,7 +1,7 @@
 ---
 title: "Python Coroutines!?!?"
 date: 2023-06-11
-tags: Utils 
+tags: "async,asyncio,python,coroutine,generator" 
 ---
 Python supports generators which allow you to `.send()` and recieve (via `next(...)`) values. They are kind of like channels since they don't block until you send or recieve.
 
