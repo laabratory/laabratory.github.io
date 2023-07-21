@@ -56,7 +56,7 @@ export default function Home({ posts }) {
         currentPost={mockPost}
         posts={[mockPost, ...posts]}
         />
-        <div className="max-w-2xl mx-auto px-3 mt-4">
+        <div className="max-w-2xl mx-auto px-3 my-4">
 					<div className="italic mt-10 mb-5"> {/* add space matching the date part of the post pages */}
 						&nbsp;
 					</div>
