@@ -15,10 +15,10 @@ Therefore we can see that the entropy is inverse of the probability -- kind of. 
 $$\sum_i^n -p_i\log p_i \text{ s.t. } \sum_i^n p_i = 1$$
 
 Here's a look at what the function inside the sigma looks like (using base 2). As $$p \to 0$$ the linear p term dominates, while in the middle, the logarithmic term plays a big role: 
-> ![](/assets/post-images/2021-12-28-information-theory/2021-12-27-21-04-14.png)
+![](/images/2021-12-27-21-04-14.png)
 
 Here's perhaps a more useful view. Red is function we are examining, green is (obviously) a linear function and blue is a negative log:
-> ![](/assets/post-images/2021-12-28-information-theory/2021-12-27-21-15-00.png)
+![](/images/2021-12-27-21-15-00.png)
 
 I was really confused about how using a logarithm of base 2 related to the bits. For a second imagine that we use base 10 instead of base 2. Now imagine the probability was .1, then .01, .001 etc. If we wanted to encode that these were the probabilities, then we would need to use $$-\log_10(p)$$ digits. It's a similar thing for base 2, if we now consider numbers encoded in binary. Note that this isn't so much about the *precision* of the probability as it is about the magnitude; if we literally wanted to encode the exact probability and it were .100000000000000001 then we might need to use many more digits than the entropy predicts, even though it makes little difference.
 

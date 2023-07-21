@@ -11,7 +11,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <Script src="/static/darkmode-load.js" strategy='beforeInteractive'></Script>
+        <Script src="/darkmode-load.js" strategy='beforeInteractive'></Script>
       </body>
     </Html>
   )
