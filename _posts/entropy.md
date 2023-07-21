@@ -17,17 +17,19 @@ $$\sum_i^n -p_i\log p_i \text{ s.t. } \sum_i^n p_i = 1$$
 Here's a look at what the function inside the sigma looks like (using base 2). As $$p \to 0$$ the linear p term dominates, while in the middle, the logarithmic term plays a big role: 
 ![](/images/2021-12-27-21-04-14.png)
 
-Here's perhaps a more useful view. Red is function we are examining, green is (obviously) a linear function and blue is a negative log:
+Here's maybe a more useful view. Red is function we are examining, green is a linear function and blue is a negative log:
 ![](/images/2021-12-27-21-15-00.png)
 
-I was really confused about how using a logarithm of base 2 related to the bits. For a second imagine that we use base 10 instead of base 2. Now imagine the probability was .1, then .01, .001 etc. If we wanted to encode that these were the probabilities, then we would need to use $$-\log_10(p)$$ digits. It's a similar thing for base 2, if we now consider numbers encoded in binary. Note that this isn't so much about the *precision* of the probability as it is about the magnitude; if we literally wanted to encode the exact probability and it were .100000000000000001 then we might need to use many more digits than the entropy predicts, even though it makes little difference.
+One thing that might be confusing is how exactly the log of base 2 related to the number of bits of information. For a second imagine that we use base 10 instead of base 2. Now imagine the probability was .1, then .01, .001 etc. If we wanted to encode that these were the probabilities, then we would need to use $$-\log_10(p)$$ digits. It's a similar thing for base 2, if we now consider numbers encoded in binary. Note that this isn't so much about the *precision* of the probability as it is about the magnitude; if we literally wanted to encode the exact probability and it were .100000000000000001 then we might need to use many more digits than the entropy predicts, even though it makes little difference.
 
 Note that non-power of 2 probabilities, this explanation implies fractional binary digits, but we can accept this as the nature of such a metric.
 
-## A sidenote on the link to real entropy
-Entropy in science (chemistry, for example) is often stated as the number of microstates a system can achieve, ie all the ways the particles can be arranged etc. This is true, but there is also a probability component -- as probability diminishes to 0, the entropy a microstate contributes is small (it's so unlikely to occur). At the same time, a small probability often implies that there are many microstates, so we want to make sure the entropy contribution is not diminished too far. This is exactly the balance the information entropy strikes.
+# Applying entropy
 
-# Entropy of repeated bernoulli trials
+It's useful to think of where we can find entropy both in the natural sciences and in statistics.
+
+## The link to entropy in science
+Entropy in physics, for example, is often stated as the number of microstates a system can achieve, ie all the ways the particles can be arranged etc. This is true, but there is also a probability component -- as probability diminishes to 0, the entropy a microstate contributes is small (it's so unlikely to occur). This mirrors the intuition for information theoretical entropy. 
 
 ## Entropy of the number of successes with the number of trials? (Binomial)
 Let X be the binomial random variable that denotes the number of successes of n bernouli trials. The probability mass function is given by $$Pr[X = i] = p^i(1-p)^{n-i}$$. We aim to find $$\sum_{i = 1}^{n} p^i(1-p)^{n-i} \log(p^i(1-p)^{n-i})$$.

@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Post({ post, morePosts }) {
   const router = useRouter()
-  const title = `${post.title || post.slug } | aadalal`
+  const title = `${ post.title || post.slug } | aadalal`
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }

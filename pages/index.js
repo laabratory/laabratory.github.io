@@ -57,11 +57,12 @@ export default function Home({ posts }) {
         posts={[mockPost, ...posts]}
         />
         <div className="max-w-2xl mx-auto px-3 mt-4">
-          <div className="my-10">
-            <div className="text-8xl w-3/4 font-junicode">
-              Hi, I&apos;m Aagam.
-            </div>  
-          </div>
+					<div className="italic mt-10 mb-5"> {/* add space matching the date part of the post pages */}
+						&nbsp;
+					</div>
+					<div className="text-8xl w-3/4 font-junicode">
+						Hi, I&apos;m Aagam.
+					</div>  
           <div className='mb-8 text-xl italic'>
           </div>
           <div className='font-bold text-xl opacity-75 flex flex-col gap-4'>

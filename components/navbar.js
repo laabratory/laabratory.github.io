@@ -21,14 +21,14 @@ export default function Navbar({
       <DarkModeSwitch/>
     </div>
     <div className="col-span-0 hidden md:col-span-6 py-4 px-2 border-y-2 border-r-2 md:grid grid-cols-16 gap-6 overflow-hidden whitespace-nowrap items-center justify-center">
-      <div className="col-span-5 md:col-span-6 flex justify-end items-center flex-shrink gap-5">
+      <div className="col-span-5 flex justify-end items-center flex-shrink gap-5">
         { previous }
       </div>
-      <div className="col-span-6 md:col-span-4 flex flex-row justify-between items-center flex-shrink-0 z-100">
+      <div className="col-span-6 flex flex-row justify-between items-center flex-shrink-0 z-10">
         <Link id="previous-post" href={linkFromSlug(posts[loc - 1]?.slug)} className={posts[loc - 1] ? "" : "opacity-50 cursor-not-allowed"}>
           <svg xmlns="http://www.w3.org/2000/svg" className="h-8" fill="currentColor" viewBox="144 64 224 384"><path d="M368 64L144 256l224 192V64z"/></svg>
         </Link>
-        <div className="shrink text-2xl font-junicode">
+        <div className="shrink text-2xl font-junicode bg-white dark:bg-black">
           { currentPost.title }
         </div>
         <Link id="next-post" href={linkFromSlug(posts[loc + 1]?.slug)} className={posts[loc + 1] ? "" : "opacity-50 cursor-not-allowed dark:text-white"}
@@ -36,7 +36,7 @@ export default function Navbar({
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="h-8 dark:text-white" viewBox="144 64 224 384"><path d="M144 448l224-192L144 64v384z"/></svg>
         </Link>
       </div>
-      <div className="col-span-5 md:col-span-6 flex justify-start items-center flex-shrink gap-5">
+      <div className="col-span-5 flex justify-start items-center flex-shrink gap-5">
         { next }
       </div>
     </div>
