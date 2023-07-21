@@ -47,7 +47,7 @@ export async function getStaticProps({ params: { slug } }) {
     'coverImage',
     'date'
   ])
-  const morePosts = getAllPosts(['title', 'slug'])
+  const morePosts = getAllPosts(['title', 'slug', 'date'])
   const content = await markdownToHtml(post.content || '')
   
   return {
@@ -62,13 +62,14 @@ export async function getStaticProps({ params: { slug } }) {
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const posts = getAllPosts(['slug', 'date'])
 
   return {
     paths: posts.map((post) => {
       return {
         params: {
           slug: post.slug,
+					date: post.date
         },
       }
     }),

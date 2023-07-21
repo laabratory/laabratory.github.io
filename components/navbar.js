@@ -8,7 +8,7 @@ export default function Navbar({
   style
 }) {
   let loc = posts.map(post => post.slug).indexOf(currentPost.slug)
-  loc = loc === -1 ? 0 : loc
+  loc = loc === -1 ? 0 : loc // if we don't find the slug, we're on the home page
   
   const postToLink = post => <Link href={linkFromSlug(post.slug)} key={post.slug} className="opacity-75">{post.title}</Link>
 

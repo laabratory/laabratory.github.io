@@ -14,6 +14,7 @@ export default function Home({ posts }) {
   const mockPost = {
     title: "", 
     slug: "",
+		date: "3000-11-11" // far, far in the future??
   }
 
   const [search, setSearch] = useState("")
