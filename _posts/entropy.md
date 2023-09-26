@@ -36,4 +36,4 @@ Let X be the binomial random variable that denotes the number of successes of n 
 
 Here's [a desmos](https://www.desmos.com/calculator/hsxokrr2to) with the function.
 
-We see some interesting behavior. For a small number of trials, the entropy is small, but increases then rapidly drops to 0. This illustrates (to some extent) the value of repeated trials. I was curious to how this compared to something like the or standard deviation. The results are vastly different (let me know if I did something wrong in computing 😅)
+We see some interesting behavior. For a small number of trials, the entropy is small, but increases then rapidly drops to 0. The fact that the entropy rises for the first couple trials illustrates that entropy rises as more cases are possible (you can have a greater range of values in a binomial random variable of 2 trials than on 1 trial). The fact that it eventually limits to 0 shows us the value of repeated trials in increasing our certainty and thereby reducing entropy.

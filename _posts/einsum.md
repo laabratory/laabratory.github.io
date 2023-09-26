@@ -3,7 +3,7 @@ title: "Einsum"
 date: 2022-03-14
 tags: "math"
 ---
-The basic idea for einstein notation is to drop the sigma from summations in some cases (reducing notational complexity). For instance, you might want to compute the matrix multiplication between a row vector and a column vector: $\sum_i x_i * y^i$ (*Note that the superscript is not an exponent, but rather an index for a column vector -- a sometimes-helpful quirk of notation*).
+The basic idea for einstein notation is to drop the $$\sum$$ from summations in some cases (reducing notational complexity). For instance, you might want to compute the matrix multiplication between a row vector and a column vector: $\sum_i x_i * y_i$ is $x_i yi$ in einsum.
 
 According to [Wolfram MathWorld](https://mathworld.wolfram.com/EinsteinSummation.html) there are 3 rules:
 
@@ -12,9 +12,7 @@ According to [Wolfram MathWorld](https://mathworld.wolfram.com/EinsteinSummation
 The index is just $i$ or $j$ or the like. Repeated indices mean they appear more than once in *a single term*. 
 
 Examples:
-1. $$x_i y_i = \sum_i x_i y_i$$ ☑️
-2. $$x_i + y_i = x_i + y_i$$ ✖️
-
+- $$x_i y_i = \sum_i x_i y_i$$ ☑️
 > 2. Each index can appear at most twice in any term.
 
 This means that even the indices you intend to sum over should be repeated at most twice (obviously indices you don't want to sum over should be repeated at most once)
@@ -30,7 +28,8 @@ This is a rule that only applies when you have more than one term. It specifies 
 Examples:
 1. $$x_i y_i z_j + x_i c_p$$ ✖️
 2. $$x_i y_i z_j + x_i c_j$$ ☑️
-  1. Does this imply that the index $j$ in $z_j$ equals the index $j$ in $c_j$? It's a little unclear to my eye.
+
+Does this imply that the index $j$ in $z_j$ equals the index $j$ in $c_j$? It's a little unclear to my eye.
 
 # Applications of Einstein Notation
 
@@ -38,7 +37,7 @@ Examples:
 
 The Kronecker delta is a pretty simple idea that says the following (written as pseudocode)
 
-$$\delta_{ij}$$
+$$\delta_{ij}$$:
 ```
 if i == j:
     1
@@ -69,5 +68,5 @@ $u \times v = (u_y * v_z - u_z * v_y) \hat{x} + (u_y * v_z - u_z * v_y) \hat{y} 
 
 The Levi-Civita tensor allows for a few nice things:
 1. It encodes that $i \neq j$ and $i \neq k$ since terms go to 0 when this is violated.
-2. The signs of the 2 products in each component $C_i$ are flipped since we have $ibc$ nad $icb$, one of which must necessarily be odd and one even.
+2. The signs of the 2 products in each component $C_i$ are flipped since we have $ijk$ and $ikj$, one of which must necessarily be odd and one even.
 3. It encodes the flip in sign that occurs for the $\hat{y}$ term (ie when $i = 2$). This is since $213$ (ie where $i < j$ so that the expression is $u_1 * v_3$) is odd; and $231$ (ie where $i > j$) is even.
