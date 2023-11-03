@@ -2,7 +2,7 @@
 title: Lessons from Product Managing
 date: 2023-06-01
 ---
-When I started as a product manager at Roblox, I didn't really even know what a product manager does. After doing it, I can confidently say that I still don't know. Every PM seems to do it differently.
+When I started as a product manager at Roblox, I didn't *really* know what PMing entailed. After doing it, I can say that I still don't totally know. Every PM seems to do it differently.
 
 There are some general trends, though. All the good PMs seem to be constantly thinking about the following things:
 1. *The Customer* - There's a trap of using the metrics you measure to replace the customer. Adoption and retention don't tell you how the customer gets value from the product. It happens so gradually, though, that you don't realize that you've stopped thinking about the customer. And this is the most obvious part of your job as a PM! So it's important not to forget about the customer.
