@@ -9,7 +9,7 @@ tags:
 
 > Much of the work we've seen in AI has been moving up the stack, from models to products. In this post, the first in a series, we explore AI interaction patterns that can deepen our understanding of user experience. - Aagam
 
-What if product teams could think about optimizing for user satisfaction in the same way we think about reinforcement learning (RLHF) for products, moving optimization up a layer in the stack to focus on **user experience**?
+What if product teams could think about optimizing for user satisfaction in the same way we think about reinforcement learning with human feedback (RLHF) for products, moving optimization up a layer in the stack to focus on **user experience**?
 
 There are hints of this in the types of fine-tuning and online learning that companies already employ. This approach aligns with the "flywheel thesis"—you collect feedback from users, integrate it into your model, and make it a source of competitive advantage. But this feedback loop primarily impacts the machine learning layer, not the UX built around it.
 
@@ -46,5 +46,5 @@ These challenges seem manageable in the long term.
 
 Next, there are questions about the balance of this approach with traditional product management:
 1. What is the right balance between direct user feedback and "product sense"? Some argue that users often don’t know exactly what they want.
-	1. A key benefit of adaptive UX is that it empowers users to creatively solve their own problems rather than relying solely on product teams to make decisions on their behalf.
+	- This might be a good thing. A key benefit of adaptive UX is that it empowers users to creatively solve their own problems rather than relying solely on product teams to make decisions on their behalf.
 2. How can this contribute to revenue and other bottom-line metrics? Product development often considers factors beyond user satisfaction, including monetization, engagement, and other metrics.
