@@ -7,7 +7,7 @@ tags:
   - adaptive-ui
 ---
 
-> Much of the work we've seen in AI has been moving up the stack, from models to products. In this post, the first in a series, we explore AI interaction patterns that can deepen our understanding of user experience (UX).
+> Much of the work we've seen in AI has been moving up the stack, from models to products. In this post, the first in a series, we explore AI interaction patterns that can deepen our understanding of user experience. - Aagam
 
 What if product teams could think about optimizing for user satisfaction in the same way we think about reinforcement learning (RLHF) for products, moving optimization up a layer in the stack to focus on **user experience**?
 
@@ -38,7 +38,7 @@ By shortening the feedback loop between user needs and solutions, users could co
 # Limitations and Open Questions
 
 First, there are technical limitations:
-1. There are few strong examples of *Adaptive UX* currently.
+1. There are few strong examples of Adaptive UX currently.
 2. Models may not yet be sophisticated enough.
 3. There may be software engineering challenges with deploying and scaling self-modifying software.
 
