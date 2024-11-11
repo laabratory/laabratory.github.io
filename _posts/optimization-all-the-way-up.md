@@ -1,43 +1,50 @@
 ---
-title: Optimization all the way up
-date: 2024-11-07
-tags: []
+title: Optimization All the Way Up
+date: 2024-11-11
+tags:
+  - product-management
+  - ux
+  - adaptive-ui
 ---
-> A lot of the work that we've seen around AI has been moving up the stack, from models to products. In this series, we explore AI interaction patterns that can help us understand the UX better.
 
-What if product teams could think about optimizing for user joy in the same way we think about RLHFing a product, moving the optimization a layer up in the stack to the **user experience**.
+> Much of the work we've seen in AI has been moving up the stack, from models to products. In this post, the first in a series, we explore AI interaction patterns that can deepen our understanding of user experience (UX).
 
-There are shades of this in the types of fine-tuning and online learning that companies do. This is the flywheel thesis -- you get feedback from your users and then integrate into the your model thus making it a source of competitive advantage. But this is only really true for the ML layer, not the UX build around it.
+What if product teams could think about optimizing for user satisfaction in the same way we think about reinforcement learning (RLHF) for products, moving optimization up a layer in the stack to focus on **user experience**?
 
-Right now, optimization on the UX level happens via product managers, who (1) take in feedback from users, (2) their own product experience, and (3) produce product plans for what to build over the next cycle. Product managers are essentially optimizers. 
+There are hints of this in the types of fine-tuning and online learning that companies already employ. This approach aligns with the "flywheel thesis"—you collect feedback from users, integrate it into your model, and make it a source of competitive advantage. But this feedback loop primarily impacts the machine learning layer, not the UX built around it.
 
-There are some bottlenecks in this process:
-* Getting user feedback is non-trivial. People often can't elaborate on what they need, and they are often busy.
-* The optimization that's happen is predicated on the idea that producing new software is expensive and time-consuming. Product roadmaps need to be conservative, and so you lean heavily on product sense and other tools to convert user feedback into action.
-* The data-driven optimization we do -- AB testing -- is expensive, and difficult to gain concrete insights for ("Stat Significance" is an important but annoying word for PMs).
+Currently, UX optimization happens largely through product managers, who (1) gather feedback from users, (2) draw on their own product experience, and (3) devise product plans for the next cycle. Product managers essentially act as optimizers.
+
+However, there are bottlenecks in this process:
+* Collecting user feedback is challenging. Users often find it difficult to articulate their needs, and they are usually busy.
+* The optimization process relies on the idea that creating new software is costly and time-consuming. Product roadmaps tend to be conservative, leaning heavily on product intuition and various tools to turn feedback into action.
+* The data-driven optimizations we use—such as A/B testing—are costly and often yield unclear insights (PMs often find "statistical significance" both essential and frustrating).
 
 <details>
 	<summary>Caveat</summary>
-	There are also certainly benefits -- product managers act as a filter removing the things that don't make sense). The goal is not to say that product managers are not useful. They are!
+	There are definite benefits here—product managers filter out impractical ideas, ensuring only the most viable ones move forward. The goal is not to diminish the value of product managers.
 </details>
 
-Maybe there's a new way of doing this optimization. One that relies on the step change in the ease of producing software to implement feedback immediately as it is received and test it on new users.
+Perhaps there’s a new approach to optimization. One that leverages recent advances in software creation to implement user feedback as it’s received and test it immediately on new users.
 
 # Optimizing UX
+
 ![](/images/optimization-all-the-way-up/initial-diagram.excalidraw.svg)
 
-In the old way, there's a lot of fuzziness between the user's intent and what actually gets communicated back to the product manager (many product managers talk about "proxies" because user intent/need is difficult to understand directly). In the new way, the user more clearly states their intent because the **application will adapt to what the user intends** (let's all it *Adaptive UX*).
+In the traditional approach, there's often a disconnect between the user's intent and what is communicated back to the product manager (hence why product managers refer to "proxies" since direct understanding of user intent is challenging). With a new approach, the user could express their intent more directly because the **application adapts to their needs** (let's call it *Adaptive UX*).
 
-By tightening the feedback between a users need and solving it we can get users to more directly communicate what they want. Then, if that thing is useful for other users, we can build it in full.
+By shortening the feedback loop between user needs and solutions, users could communicate their needs more clearly. If these solutions benefit other users as well, they can be fully integrated into the product.
+
 # Limitations and Open Questions
 
-First there are technical limitations:
-1. We haven't really seen many great examples of this *Adaptive UX* yet.
-2. Maybe models aren't smart enough
-3. There might be software engineering challenges around software that modifies itself (e..g, how do you deploy and scale these things)
-These seem easy to overcome
+First, there are technical limitations:
+1. There are few strong examples of *Adaptive UX* currently.
+2. Models may not yet be sophisticated enough.
+3. There may be software engineering challenges with deploying and scaling self-modifying software.
 
-Then there are open questions about the idea and product management
-1. What is the right balance between this kind of direct user feedback and "product sense"? Some product people would argue that users often don't know what they want.
-	1. I would argue that these is a key benefit to this kind of adaptive UX which is that it returns control to the user -- allowing them to be more deeply creative to solve their problems rather than outsourcing that creativity to product teams
-2. How can this drive revenue and other bottom line metrics? There are often considerations other than just user joy driving product development -- namely monetization, engagement etc.
+These challenges seem manageable in the long term.
+
+Next, there are questions about the balance of this approach with traditional product management:
+1. What is the right balance between direct user feedback and "product sense"? Some argue that users often don’t know exactly what they want.
+	1. A key benefit of adaptive UX is that it empowers users to creatively solve their own problems rather than relying solely on product teams to make decisions on their behalf.
+2. How can this contribute to revenue and other bottom-line metrics? Product development often considers factors beyond user satisfaction, including monetization, engagement, and other metrics.
