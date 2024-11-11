@@ -7,7 +7,7 @@ const PostBody = ({ content, title, date, className }) => {
 					<div className="italic opacity-75 mt-10 mb-5">
 						<time>{date}</time>
 					</div>
-					<h1 className="text-8xl w-3/4 font-junicode mb-10">
+					<h1 className="text-8xl w-3/4 font-junicode leading-tight	 mb-10">
 						{ title }
 					</h1>
 				</header>
