@@ -42,12 +42,12 @@ First, there are technical limitations:
 2. Models may not yet be sophisticated enough.
 3. There may be software engineering challenges with deploying and scaling self-modifying software.
 
-These challenges seem manageable. In fact, I believe this can be build today -- maybe with the exception of scaling up the software engineering.
+These challenges seem manageable. In fact, I believe this can be build today by a solo dev -- maybe with the exception of scaling up the software engineering.
 
 Next, there are questions about the balance of this approach with traditional product management:
 1. What is the right balance between direct user feedback and "product sense"? Some argue that users often don’t know exactly what they want.
 	- This might be a good thing. A key benefit of adaptive UX is that it empowers users to creatively solve their own problems rather than relying solely on product teams to make decisions on their behalf.
-2. How can this contribute to revenue and other bottom-line metrics? Product development often considers factors beyond user satisfaction, including monetization, engagement, and other metrics.
+2. How can this contribute to revenue and other bottom-line metrics? Product development often considers factors beyond user satisfaction, including monetization, engagement, and other metrics. In many cases, companies and their users have misaligned incentives (e.g., the adage that "if you're not paying for something, *you* are the product")
   - maybe converting these beta features into fully fledged, productionized software can be an action that requires users to spend money.
 
-I think this an area for deeper, more thoughtful exploration. In following blog posts, we'll try to understand adaptive UX in practice.
+I think this is an area for deeper, more thoughtful exploration. In following blog posts, we'll try to understand adaptive UX in practice.
