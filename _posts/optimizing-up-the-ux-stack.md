@@ -1,5 +1,5 @@
 ---
-title: "Optimizing UX like an ML model"
+title: "Optimizing up the UX stack"
 date: 2024-11-11
 tags:
   - product-management
@@ -29,7 +29,7 @@ Perhaps there’s a new approach to optimization. One that leverages recent adva
 
 # Optimizing UX
 
-![](/images/optimization-all-the-way-up/initial-diagram.excalidraw.svg)
+![](/images/optimizing-up-the-ux-stack/initial-diagram.excalidraw.svg)
 
 In the traditional approach, there's often a disconnect between the user's intent and what is communicated back to the product manager (hence why product managers refer to "proxies" since direct understanding of user intent is challenging). With a new approach, the user could express their intent more directly because the **application adapts to their needs** (let's call it *Adaptive UX*).
 
