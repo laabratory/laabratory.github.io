@@ -17,7 +17,7 @@ const Laabratory = ({ link = true }) => {
       {link ? (
         <a
           className={brClasses + " hover:underline"}
-          href="https://brianwilliams.xyz"
+          href="https://brianwilliams.tech"
         >
           br
         </a>

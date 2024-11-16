@@ -30,3 +30,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# obsidian (so we can write posts in obsidian)
+.obsidian
