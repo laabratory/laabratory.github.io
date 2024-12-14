@@ -7,7 +7,7 @@ tags:
   - adaptive-ui
 ---
 
-> Much of the work we've seen in AI has been moving up the stack, from models to products. In this post, the first in a series, we explore AI interaction patterns that can deepen our understanding of user experience. - Aagam
+> Much of the work we've seen in AI has been moving up the stack, from models to products. In this post, we explore AI interaction patterns that can deepen our understanding of user experience. You can try a kind of limited version of this using the accompanying [End User Modifiable Website](/self-modifying-website.html) app - Aagam
 
 What if product teams could think about optimizing for user satisfaction in the same way we think about reinforcement learning with human feedback (RLHF) for products, moving optimization up a layer in the stack to focus on **user experience**?
 
@@ -50,4 +50,19 @@ Next, there are questions about the balance of this approach with traditional pr
 2. How can this contribute to revenue and other bottom-line metrics? Product development often considers factors beyond user satisfaction, including monetization, engagement, and other metrics. In many cases, companies and their users have misaligned incentives (e.g., the adage that "if you're not paying for something, *you* are the product")
   - maybe converting these beta features into fully fledged, productionized software can be an action that requires users to spend money.
 
-I think this is an area for deeper, more thoughtful exploration. In following blog posts, we'll try to understand adaptive UX in practice.
+I think this is an area for deeper, more thoughtful exploration.
+
+# Try it
+
+Recall these tenets of what we need to do to build the vision outlined above:
+
+1. Allowing end users to modify a tool (in this case, a website) to make it better fit their purpose
+    1. Allowing rich integration with APIs so that modification can happen automatically
+2. Persisting and productionizing these changes
+    1. Allowing users to continue using their modified versions (you now have thousands of "versions" of your app - how do you cope with the load? How do you bring these users back into the fold?)
+3. Making the changes actionable for development teams
+
+Towards 1, I wrote a self-modifying website. It doesn't currently have rich integrations or a mechanism for persisting the changes made. But it accomplishes a lot of what we hope to achieve with adaptive UI in the first pass.
+
+Try it out here: [End User Modifiable Website](/self-modifying-website.html). You can view the source code here: [aadalal/self-modifying-website](https://github.com/AaDalal/self-modifying-website)
+
