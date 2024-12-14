@@ -1,3 +1,5 @@
+Here's the complete revised version, maintaining the same structure but with the edits incorporated:
+
 ---
 title: "Optimizing up the UX stack"
 date: 2024-11-11
@@ -7,7 +9,7 @@ tags:
   - adaptive-ui
 ---
 
-> Much of the work we've seen in AI has been moving up the stack, from models to products. In this post, we explore AI interaction patterns that can deepen our understanding of user experience. You can try a kind of limited version of this using the accompanying [End User Modifiable Website](/self-modifying-website.html) app - Aagam
+> Much of the work in AI has been moving up the stack, from models to products. In this post, we explore AI interaction patterns that can deepen our understanding of user experience. Try a limited version using the accompanying [End User Modifiable Website](/self-modifying-website.html) app - Aagam
 
 What if product teams could think about optimizing for user satisfaction in the same way we think about reinforcement learning with human feedback (RLHF) for products, moving optimization up a layer in the stack to focus on **user experience**?
 
@@ -16,16 +18,16 @@ There are hints of this in the types of fine-tuning and online learning that com
 Currently, UX optimization happens largely through product managers, who (1) gather feedback from users, (2) draw on their own product experience, and (3) devise product plans for the next cycle. Product managers essentially act as optimizers.
 
 However, there are bottlenecks in this process:
-* Collecting user feedback is challenging. Users often find it difficult to articulate their needs, and they are usually busy.
-* The optimization process relies on the idea that creating new software is costly and time-consuming. Product roadmaps tend to be conservative, leaning heavily on product intuition and various tools to turn feedback into action.
-* The data-driven optimizations we use—such as A/B testing—are costly and often yield unclear insights (PMs often find "statistical significance" both essential and frustrating).
+* User feedback collection is challenging - users struggle to articulate needs and are typically time-constrained
+* Software creation costs drive conservative product roadmaps that rely heavily on product intuition
+* Traditional data-driven methods like A/B testing are expensive and often yield ambiguous results
 
 <details>
 	<summary>Caveat</summary>
 	There are definite benefits here—product managers filter out impractical ideas, ensuring only the most viable ones move forward. The goal is not to diminish the value of product managers.
 </details>
 
-Perhaps there’s a new approach to optimization. One that leverages recent advances in software creation to implement user feedback as it’s received and test it immediately on new users.
+Perhaps there's a new approach to optimization. One that leverages recent advances in software creation to implement user feedback as it's received and test it immediately on new users.
 
 # Optimizing UX
 
@@ -38,23 +40,23 @@ By shortening the feedback loop between user needs and solutions, users could co
 # Limitations and Open Questions
 
 First, there are technical limitations:
-1. There are few strong examples of Adaptive UX currently.
-2. Models may not yet be sophisticated enough.
-3. There may be software engineering challenges with deploying and scaling self-modifying software.
+1. Few robust examples of Adaptive UX exist currently
+2. Current models may lack required sophistication
+3. Scaling and deploying self-modifying software presents engineering challenges
 
 These challenges seem manageable. In fact, I believe this can be build today by a solo dev -- maybe with the exception of scaling up the software engineering.
 
 Next, there are questions about the balance of this approach with traditional product management:
-1. What is the right balance between direct user feedback and "product sense"? Some argue that users often don’t know exactly what they want.
-	- This might be a good thing. A key benefit of adaptive UX is that it empowers users to creatively solve their own problems rather than relying solely on product teams to make decisions on their behalf.
-2. How can this contribute to revenue and other bottom-line metrics? Product development often considers factors beyond user satisfaction, including monetization, engagement, and other metrics. In many cases, companies and their users have misaligned incentives (e.g., the adage that "if you're not paying for something, *you* are the product")
-  - maybe converting these beta features into fully fledged, productionized software can be an action that requires users to spend money.
+1. What's the optimal balance between direct user feedback and product intuition, given users may not always know exactly what they want?
+   - This limitation could be a feature: adaptive UX empowers users to solve their own problems rather than relying solely on product teams
+2. How does this approach align with revenue and bottom-line metrics, considering that product development often balances user satisfaction with monetization and engagement?
+   - One solution: monetize by converting beta features into fully productionized software
 
 I think this is an area for deeper, more thoughtful exploration.
 
 # Try it
 
-Recall these tenets of what we need to do to build the vision outlined above:
+To build this vision, we need to address three key challenges:
 
 1. Allowing end users to modify a tool (in this case, a website) to make it better fit their purpose
     1. Allowing rich integration with APIs so that modification can happen automatically
@@ -64,5 +66,4 @@ Recall these tenets of what we need to do to build the vision outlined above:
 
 Towards 1, I wrote a self-modifying website. It doesn't currently have rich integrations or a mechanism for persisting the changes made. But it accomplishes a lot of what we hope to achieve with adaptive UI in the first pass.
 
-Try it out here: [End User Modifiable Website](/self-modifying-website.html). You can view the source code here: [aadalal/self-modifying-website](https://github.com/AaDalal/self-modifying-website)
-
+Try it out here: [End User Modifiable Website](/self-modifying-website.html). You can view the source code here: [aadalal/self-modifying-website](https://github.com/AaDalal/self-modifying-website). You can also just download this page -- it's a single HTML file.
